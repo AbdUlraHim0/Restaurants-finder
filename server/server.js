@@ -4,7 +4,9 @@ const restaurantsRoutes = require("./routes/restaurants")
 
 const app = express()
 
-app.use("/", restaurantsRoutes)
+app.use(express.json())
+
+app.use("/api/v1/restaurants", restaurantsRoutes)
 
 const PORT = process.env.PORT || 4000
 
